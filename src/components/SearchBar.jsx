@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import "../index.css";
 import { createCompletion } from "../services/openAiService";
-import { PROMPTS } from "../constants/prompts";
 import SendIcon from "@mui/icons-material/Send";
 import { CircularProgress, IconButton } from "@mui/material";
 import RequirementsSelector from "./RequirementsSelector";
+import { PROMPTS } from "../constants/constants";
 
 const getPosition = () =>
   new Promise((res, rej) => {
     navigator.geolocation.getCurrentPosition(res, rej);
   });
 
-const buildPrompt = (value) => {
-  return `${PROMPTS.INIT_PROMPT}${PROMPTS.CHEAP_AND_NEARBY} ${value}. ${PROMPTS.JSON_EXPLANATION}`;
+const buildPrompt = (rules, location) => {
+  return `${PROMPTS.INIT_PROMPT}: ${rules}. My location is ${location}. ${PROMPTS.JSON_EXPLANATION}`;
 };
 
 const getLocation = async () => {
@@ -34,7 +34,10 @@ const SearchBar = ({ setAnswers }) => {
     console.log(options);
     if (position != null) {
       const response = await createCompletion(
-        buildPrompt(`${position.coords.latitude},${position.coords.longitude}`)
+        buildPrompt(
+          options,
+          `${position.coords.latitude},${position.coords.longitude}`
+        )
       );
       setAnswers(response);
       setLoading(false);

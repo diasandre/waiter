@@ -5,6 +5,8 @@ body {
 }
 
 .logo {
+  width: 80px;
+  height: 80px;
   border-radius: 30px;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -38,8 +40,8 @@ a:hover {
 .container {
   display: flex;
   flex-direction: column;
-  min-width: 600px;
-  height: 600px;
+  min-width: 650px;
+  height: 650px;
   border: 0 !important;
 }
 
@@ -49,7 +51,7 @@ a:hover {
 
 .chat-header {
   display: flex;
-  background: #7CEA9C;
+  background: #7cea9c;
   border-radius: 4px 4px 0 0;
   align-content: center;
   flex-direction: row;
@@ -66,7 +68,7 @@ a:hover {
   flex-direction: column;
 }
 
-.question-container {
+.message-container {
   display: flex;
   width: 100vh;
   align-content: flex-start;
@@ -102,16 +104,8 @@ a:hover {
 }
 
 .button {
-  background-color: #36558F !important;
+  background-color: #36558f !important;
   color: white !important;
-}
-
-.credits {
-  color: white;
-  font-weight: 200;
-  text-align: center;
-  margin: 0;
-  font-size: 0.75em;
 }
 
 .MuiLoadingButton-root {
@@ -120,4 +114,16 @@ a:hover {
 
 .input {
   width: 40vh;
+  background: white;
+}
+
+.information-message {
+  background: white;
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+.restaurant-name {
+  font-weight: 400;
 }

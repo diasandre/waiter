@@ -1,5 +1,25 @@
 import styled, { keyframes } from "styled-components";
 
+export const ChatHeaderContainer = styled.div`
+  display: flex;
+  color: ${(props) => props.fontColor};
+  background: ${(props) => props.headerColor};
+  border-radius: 4px 4px 0 0;
+  align-content: center;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  border-bottom: 1px solid #cacaca;
+`;
+
+export const CreditsField = styled.p`
+  color: white;
+  font-weight: 300;
+  text-align: center;
+  margin: 0;
+  font-size: 0.95em;
+`;
+
 const bounce = keyframes`
     0% {
         transform: scale(0);
