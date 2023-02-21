@@ -3,14 +3,6 @@
   "version": "1.0.0",
   "description": "Restaurant recommendations using AI",
   "author": "André Dias",
-  "homepage": "https://github.com/diasandre/waiter#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/diasandre/waiter.git"
-  },
-  "bugs": {
-    "url": "https://github.com/diasandre/waiter/issues"
-  },
   "private": true,
   "dependencies": {
     "@emotion/styled": "^11.10.6",
