@@ -16,6 +16,9 @@
  </div>
 
 <br />
+  
+## Disclaimer
+Just a POC, because ChatGPT data is inaccurate.
 
 ## URL
 https://walterthewaiter.netlify.app/
